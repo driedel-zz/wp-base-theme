@@ -1,0 +1,2 @@
+!function(a){a.require||(a.hbsExec=a.hbsExec||[],a.require=function(){a.hbsExec.push({func:"require",args:arguments})},a.define=function(){a.hbsExec.push({func:"define",args:arguments})},a.queue=function(){a.hbsExec.push({func:"queue",args:arguments})})}(window),define("mod/hyojun/mod-async-check",function(){}),define("main-home",["require","mod/hyojun/mod-async-check"],function(a){a("mod/hyojun/mod-async-check")}),require([],function(){console.info("HELLO WORLD!")});
+//# sourceMappingURL=main-home.js.map

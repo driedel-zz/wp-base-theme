@@ -1,0 +1,120 @@
+// Para mais informações sobre como organizar as unidades, acesse http://goo.gl/tSWIdm
+
+
+/////////////////////
+// FONT TABLE SIZE //
+/////////////////////
+
+// Todos os tamanhos base para fontes do projeto.
+
+//Exemplo
+// $content-font-size: 14px;
+// $discreet-font-size: 11px;
+// $head-font-size: 32px;
+
+$base-font-size: 16px;
+$title-font-size: 20px;
+
+$gl-font-size-example-list: (
+	("base", $base-font-size, $base-font-size), // base font é pixel para referência de cálculo.
+	("title", $title-font-size, $base-font-size),
+);
+
+
+
+///////////////////
+// PROJECT TEXTS //
+///////////////////
+
+// Agrupamento de tamanhos de fonte, comum em projetos mais complexos. Exemplo:
+
+// header
+// $header-title-font-size: $head-font-size;
+// $header-description-font-size: $lead-font-size;
+
+// navigation
+// $nav-font-size: $discreet-font-size;
+// $nav-title-font-size: $content-font-size;
+
+// forms
+// $base-input-font-size: $discreet-font-size;
+// $base-button-font-size: $discreet-font-size;
+
+
+
+//////////////////
+// FONT WEIGHTS //
+//////////////////
+
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
+$black-font-weight: 900;
+
+$gl-font-weight-example-list: (
+	("light", $light-font-weight),
+	("regular", $regular-font-weight),
+	("medium", $medium-font-weight),
+	("bold", $bold-font-weight),
+	("black", $black-font-weight)
+);
+
+
+/////////////
+// Z-INDEX //
+/////////////
+
+$behind-z-index: 3;
+$content-z-index: 6;
+$context-z-index: 9;
+$layer-z-index: 11;
+$over-z-index: 12;
+
+$gl-z-index-example-list: (
+	("behind", $behind-z-index),
+	("content", $content-z-index),
+	("context", $context-z-index),
+	("layer", $layer-z-index),
+	("over", $over-z-index)
+);
+
+
+///////////////
+// ANIMATION //
+///////////////
+
+// duração
+$base-anim-duration: .3s;
+$slow-anim-duration: $base-anim-duration * 2;
+$fast-anim-duration: $base-anim-duration * .5;
+
+// easing (from http://matthewlein.com/ceaser/)
+$base-anim-ease: ease;
+$in-out-anim-ease: cubic-bezier(.455, .03, .515, .955); // easeInOutQuad
+$bounce-anim-ease: cubic-bezier(.68, -.55, .265, 1.55); // easeInOutBack
+
+// delay
+$base-anim-delay: .2s;
+$slow-anim-delay: $base-anim-delay * 2;
+$fast-anim-delay: $base-anim-delay * .5;
+
+
+
+///////////////////
+// BASE MEASURES //
+///////////////////
+
+// Todas as medidas base (padding, margin, etc.) ficam aqui.
+
+//Exemplos:
+// $separator-space-size: ($base-space-size * 4);
+// $img-replacement-text-indent: -9999px;
+
+$base-space-size: 10px;
+$double-space-size: ($base-space-size * 2);
+
+$gl-spacement-example-list: (
+	("base", $base-space-size, $base-font-size),
+	("double", $double-space-size, $base-font-size),
+);

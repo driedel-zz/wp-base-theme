@@ -1,0 +1,15 @@
+<?php
+	$relative_directory_uri = str_replace($protocol.$_SERVER['HTTP_HOST'], '', get_template_directory_uri());
+	define('AssetsRoot' , $relative_directory_uri.'/assets/');
+
+	define('Modules', '/Shared/Modules/');
+	define('Strucutre', '/Shared/Structure/');
+	define('BaseToSubDir', dirname(__FILE__).'../../');
+	/*define('Inc', $relative_directory_uri.'/helpers/inc/');*/
+
+	$GLOBALS['global_css'] = AssetsRoot.'css/common.css';
+
+	// Registrar o wrapper de todos os helpers
+	$theme_path = get_template_directory();
+	require($theme_path.'/Helpers/wrapper.php');
+?>

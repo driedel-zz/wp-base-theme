@@ -1,0 +1,9 @@
+# Don't sent dev files (.git, modules, project files)
+.*
+bower_components
+node_modules
+*.sublime-*
+
+# Avoid delet compiled references on the test server #
+obj
+bin

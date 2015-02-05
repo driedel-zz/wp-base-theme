@@ -1,0 +1,85 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"grunt",
+				"sass",
+				"--no-color"
+			],
+			"name": "SASS update",
+			"path": "/usr/local/bin:/usr/bin/",
+			"selector": "source.sass, source.scss"
+		},
+		{
+			"cmd":
+			[
+				"grunt",
+				"requirejs",
+				"--no-color"
+			],
+			"name": "Require update",
+			"path": "/usr/local/bin:/usr/bin/",
+			"selector": "source.js"
+		}
+	],
+	"folders":
+	[
+		{
+			"name": "sass",
+			"path": "./wp-content/themes/wp-base-theme/assets/sass/",
+			"folder_exclude_patterns":
+			[
+				".sass-cache"
+			]
+		},{
+			"name": "js",
+			"path": "./wp-content/themes/wp-base-theme/assets/js/",
+			"file_exclude_patterns": [
+				"*.map"
+			],
+			"folder_exclude_patterns":
+			[
+				"dist"
+			]
+		},{
+			"name": "Helpers",
+			"path": "./wp-content/themes/wp-base-theme/Helpers/"
+		},{
+			"name": "Shared",
+			"path": "./wp-content/themes/wp-base-theme/Shared/"
+		},{
+			"name": "Page Templates",
+			"path": "./wp-content/themes/wp-base-theme/Templates/"
+		},{
+			"name": "Theme",
+			"path": "./wp-content/themes/wp-base-theme/"
+		},{
+			"file_exclude_patterns":
+			[
+				"*.sublime-workspace",
+				"*.lock",
+				"*.bat",
+				"WWW/_App_Offline.htm"
+			],
+			"folder_exclude_patterns":
+			[
+				"packages",
+				"bower_components",
+				"node_modules",
+				"wp-content/themes/wp-base-theme/assets/sass",
+				"wp-content/themes/wp-base-theme/assets/js",
+				"wp-content/themes/wp-base-theme/assets/css",
+				".sass-cache"
+			],
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"draw_white_space": "all",
+		"rulers": [ 100 ],
+		"word_wrap": false
+	}
+}

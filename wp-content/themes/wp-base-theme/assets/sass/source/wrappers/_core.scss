@@ -1,0 +1,10 @@
+@import "gs/sass/gs";
+@import "bourbon/dist/bourbon";
+
+@import "../core/config/colors";
+@import "../core/config/units";
+@import "../core/config/grids";
+@import "../core/config/typography";
+
+// Coloque os imports de funções, mixins e aniamções
+// aqui para que estejam disponíveis em todo o projeto.

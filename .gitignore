@@ -3,13 +3,17 @@
 wp-admin/
 wp-includes/
 cache/
+wp-content/*.php
+wp-content/plugins/**/*
 wp-content/themes/**/*
-!wp-content/themes/hyojun-wordpress
+!wp-content/themes/wp-base-theme/**/*
 /*.php
 /*.txt
 /*.html
 .sass-cache/
 *.*workspace
+web.config
+*.smb*
 
 # Libs #
 ###################
@@ -57,3 +61,4 @@ build.txt
 !.rsync-config
 !.rsync-ignore
 !.scss-lint
+!.htaccess.template

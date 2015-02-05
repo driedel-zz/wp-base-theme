@@ -1,0 +1,29 @@
+
+////////////////////
+// REGISTER GRIDS //
+////////////////////
+
+// Mais informações sobre a criação de grids em:
+// https://github.com/mcarneiro/gs/#registering-grids
+
+// Exemplo:
+// @include gs-register-grid("desktop", 960px, 10, 10px, auto);
+// @include gs-register-grid("tablet", 768px, 10, 10px, 959px);
+// @include gs-register-grid("mobile", 100%, 4, 10px, 767px);
+
+@mixin project-grids {
+	@include gs-clear-grid-list;
+	@include gs-register-grid("wide", 1306px, 14, 10px, auto);
+}
+
+@include project-grids;
+
+// Esta chamada de override é exclusiva para inserção
+// de uma largura diferente na guideline
+// 
+// @mixin gl-override-grids {
+// 		@include project-grids;
+// 		@include gs-register-grid("gl-wide", 1306px, 14, 10px, auto);
+// 		@include gs-register-grid("gl-normal", 960px, 10, 10px, 1305px);
+// 		@include gs-register-grid("gl-mobile", 100%, 4, 10px, 959px);
+// }

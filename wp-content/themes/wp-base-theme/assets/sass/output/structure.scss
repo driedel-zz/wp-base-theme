@@ -1,0 +1,6 @@
+// core (nada aqui dá saída de CSS, apenas
+// declarações de variáveis, funções e mixins)
+@import "../source/wrappers/core";
+
+// libs e defaults
+@import "normalize-scss/normalize";

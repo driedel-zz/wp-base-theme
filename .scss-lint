@@ -1,0 +1,20 @@
+# Check the defaults here: http://goo.gl/ztWCnA
+
+scss_files: "**/*.scss"
+
+linters:
+  ColorKeyword:
+    enabled: false
+  DuplicateProperty:
+    enabled: false
+  Indentation:
+    enabled: true
+    character: tab
+  StringQuotes:
+    enabled: true
+    style: double_quotes
+  TrailingZero:
+    enabled: true
+  UnnecessaryMantissa:
+    enabled: true
+
