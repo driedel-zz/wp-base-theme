@@ -24,6 +24,11 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
-	<?php wp_footer(); ?>
+	<!--<script src="<?php echo $AssetsRoot; ?>js/dist/maincd.js" async defer></script>-->
+
+	<?php
+		// footer reference for plugins
+		wp_footer();
+	?>
 </body>
 </html>

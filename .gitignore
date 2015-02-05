@@ -5,8 +5,7 @@ wp-includes/
 cache/
 wp-content/*.php
 wp-content/plugins/**/*
-wp-content/themes/**/*
-!wp-content/themes/wp-base-theme/**/*
+wp-content/themes/index.php
 /*.php
 /*.txt
 /*.html
