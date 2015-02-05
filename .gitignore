@@ -1,0 +1,59 @@
+# Wordpress #
+###################
+wp-admin/
+wp-includes/
+cache/
+wp-content/themes/**/*
+!wp-content/themes/hyojun-wordpress
+/*.php
+/*.txt
+/*.html
+.sass-cache/
+*.*workspace
+
+# Libs #
+###################
+bower_components
+node_modules
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Compiled source #
+###################
+*.com
+*.class
+*.o
+*.so
+*.pdb
+build.txt
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.suo
+
+# Config files #
+################
+!.gitignore
+!.rsync-config
+!.rsync-ignore
+!.scss-lint
