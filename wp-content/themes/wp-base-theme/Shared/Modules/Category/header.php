@@ -1,4 +1,4 @@
-			<header class="archive-header">
+			<header class="category-header">
 				<?php
 					$Title -> Category( single_cat_title( '', false ) );
 
@@ -8,4 +8,4 @@
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
 					}
 				?>
-			</header><!-- .archive-header -->
+			</header><!-- .category-header -->

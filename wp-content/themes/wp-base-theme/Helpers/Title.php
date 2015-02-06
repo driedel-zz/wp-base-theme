@@ -1,5 +1,5 @@
 <?php
-	class Title {
+	Class Title {
 		public function Site($title, $link = false) {
 			echo '<h1 class="site-title"><a href="'.$link.'" rel="home">'.$title.'</a></h1>';
 		}

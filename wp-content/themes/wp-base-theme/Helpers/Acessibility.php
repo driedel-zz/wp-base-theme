@@ -1,5 +1,5 @@
 <?php
-	class Acessibility {
+	Class Acessibility {
 		public function Content($text, $anchor) {
 			echo '<div class="content-toggle screen-reader-text skip-link">'.$this -> _returnLink($text, $anchor).'<div>';
 		}
