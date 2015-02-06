@@ -8,4 +8,4 @@
 						printf( '<div class="taxonomy-description">%s</div>', $term_description );
 					}
 				?>
-			</header><!-- .archive-header -->
+			</header><!-- .tag-header -->
