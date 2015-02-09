@@ -1,10 +1,10 @@
 {
-  "name": "Hyojun.bootstrap-template",
-  "description": "ASP.NET MVC bootstrap",
-  "version": "3.4.0",
+  "name": "wp-base-theme",
+  "description": "PHP Wordpress 4+",
+  "version": "",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/fbiz/hyojun.bootstrap-template/wiki/Home"
+    "url": "https://bitbucket.org/danilo_riedel/wp-base-theme/wiki/Home"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
