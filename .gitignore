@@ -5,6 +5,7 @@ wp-includes/
 cache/
 wp-content/*.php
 wp-content/plugins/**/*
+wp-content/uploads/**/*
 wp-content/themes/index.php
 /*.php
 /*.txt

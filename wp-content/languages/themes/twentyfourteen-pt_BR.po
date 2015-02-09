@@ -442,3 +442,7 @@ msgstr "Nada foi encontrado com os termos da sua pesquisa. Tente novamente com a
 #: inc/widgets.php:55
 msgid "More images"
 msgstr "Mais imagens"
+
+#: Shared/Structure/header.php:58
+msgid "Skip to Search"
+msgstr "Ir para busca"
