@@ -17,7 +17,7 @@
 				'class' => 'site-main'
 			), $options);
 
-			$this -> _returnID($id, $class);
+			$this -> _returnID($options['id'], $options['class']);
 		}
 
 		public function MainContent($options = array()) {
@@ -26,7 +26,7 @@
 				'class' => 'main-content'
 			), $options);
 
-			$this -> _returnID($id, $class);
+			$this -> _returnID($options['id'], $options['class']);
 		}
 
 		// Section wrappers
@@ -37,7 +37,7 @@
 				'class' => 'content-area'
 			), $options);
 
-			$this -> _returnID($id, $class);
+			$this -> _returnID($options['id'], $options['class']);
 		}
 
 		// Sections contents
@@ -48,7 +48,7 @@
 				'class' => 'site-content'
 			), $options);
 
-			$this -> _returnID($id, $class);
+			$this -> _returnID($options['id'], $options['class']);
 		}
 
 

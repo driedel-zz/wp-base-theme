@@ -1,6 +1,6 @@
 			<header class="category-header">
 				<?php
-					$Title -> Category( single_cat_title( '', false ) );
+					$Title -> Category( array('title' => single_cat_title( '', false )) );
 
 					// Show an optional term description.
 					$term_description = term_description();

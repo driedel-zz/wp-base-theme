@@ -11,7 +11,7 @@
 	<?php
 		$description = get_bloginfo( 'description', 'display' );
 		if ( ! empty ( $description ) ) {
-			$Title -> SiteDescription($description);
+			$Title -> SiteDescription( array( 'title' => $description) );
 		}
 
 		if ( has_nav_menu( 'secondary' ) ) : ?>

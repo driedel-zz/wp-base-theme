@@ -14,7 +14,7 @@
 	<section <?php $HtmlWrappers -> PrimarySection(); ?>>
 		<div <?php $HtmlWrappers -> SiteContent(); ?> role="main">
 			<header class="page-header">
-				<?php $Title -> Page( sprintf(__( 'Not Found', 'twentyfourteen' ))); ?>
+				<?php $Title -> Page( array('title' => sprintf(__( 'Not Found', 'twentyfourteen' ))) ); ?>
 			</header>
 
 			<div class="page-content">

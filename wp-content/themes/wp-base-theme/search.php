@@ -18,7 +18,7 @@
 			if ( have_posts() ) {
 		?>
 				<header class="page-header">
-					<?php $Title -> Page(sprintf( __( 'Search Results for: %s', 'twentyfourteen' ), get_search_query() )); ?>
+					<?php $Title -> Page( array( 'title' => sprintf( __( 'Search Results for: %s', 'twentyfourteen' ), get_search_query() ) ) ); ?>
 				</header><!-- .page-header -->
 		<?php
 				// Start the Loop.

@@ -21,7 +21,7 @@
 			// Start the Loop.
 			while ( have_posts() ) {
 				the_post();
-				$Title -> Page(get_the_title());
+				$Title -> Page( array( 'title' => get_the_title() ) );
 				the_content();
 				if ( comments_open() || get_comments_number() ) {
 					include( Modules.'comments.php' );

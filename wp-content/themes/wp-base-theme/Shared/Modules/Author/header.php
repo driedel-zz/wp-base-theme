@@ -9,7 +9,7 @@
 					 */
 					the_post();
 
-					$Title -> Author( get_the_author() );
+					$Title -> Author( array( 'title' => get_the_author() ) );
 
 					if ( get_the_author_meta( 'description' ) ) :
 				?>

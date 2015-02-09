@@ -1,43 +1,176 @@
 <?php
 	Class Title {
-		public function Site($title, $link = false) {
-			echo '<h1 class="site-title"><a href="'.$link.'" rel="home">'.$title.'</a></h1>';
+		public function Site($options = array()) {
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'site-title',
+				'tag' => 'h1',
+				'rel' => 'home'
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Site helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Main($title, $link = false) {
-			echo '<h1 class="entry-title">'.$this->_returnTitle($title, $link).'</h1>';
+		public function Main($options = array()) {
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'entry-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Main helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Secondary($title, $link = false) {
-			echo '<h2 class="entry-sub-title">'.$this->_returnTitle($title, $link).'</h2>';
+		public function Secondary($options = array()) {
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'entry-sub-title',
+				'tag' => 'h2',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Secondary helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Page($title, $link = false) {
-			echo '<h1 class="page-title">'.$this->_returnTitle($title, $link).'</h1>';
+		public function Page($options = array()) {
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'page-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Page helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Category($title) {
-			echo '<h1 class="category-title">'.sprintf( __( 'Category Archives: %s', 'twentyfourteen' ), $title ).'</h1>';
+		public function Category($options = array()) {
+			$options['title'] = sprintf( __( 'Category Archives: %s', 'twentyfourteen' ), $options['title'] );
+
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'category-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Page helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Tag($title) {
-			echo '<h1 class="tag-title">'.sprintf( __( 'Tag Archives: %s', 'twentyfourteen' ), $title ).'</h1>';
+		public function Tag($options = array()) {
+			$options['title'] = sprintf( __( 'Tag Archives: %s', 'twentyfourteen' ), $options['title'] );
+
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'tag-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Tag helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function Author($title) {
-			echo '<h1 class="author-title">'.sprintf( __( 'All posts by %s', 'twentyfourteen' ), $title ).'</h1>';
+		public function Author($options = array()) {
+			$options['title'] = sprintf( __( 'All posts by %s', 'twentyfourteen' ), $options['title'] );
+
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'author-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; Author helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		public function SiteDescription($title) {
-			echo '<h2 class="site-description">'.$title.'</h2>';
+		public function SiteDescription($options = array()) {
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'site-description',
+				'tag' => 'h2',
+				'rel' => null
+			), $options);
+
+			if ($options['title'] == null) {
+				echo '<h1>Title missing on Title &gt; SiteDescription helper</h1>';
+				return;
+			}
+
+			$this->_constructTitle($options);
 		}
 
-		private function _returnTitle($title, $link = false) {
-			$output	=	($link != false ? '<a href="'.$link.'" rel="bookmark">' : '')
-						.$title
-						.($link != false ? '</a>' : '');
+		private function _constructTitle($options) {
+			$titleValues = (array)$options;
 
-			return $output;
+			$options = array_merge(array(
+				'title' => null,
+				'link' => null,
+				'id' => null,
+				'class' => 'site-title',
+				'tag' => 'h1',
+				'rel' => null
+			), $titleValues);
+
+			$output =	'<'.$options['tag']. ' class="'.$options['class'].'"'
+							.($options['id'] != null ? ' id="'.$options['id'].'" >' : '>')
+								.($options['link'] != null ? '<a href="'.$options['link'].'" ' : '')
+								.($options['rel'] != null ? 'rel="'.$options['rel'].'">' : $options['link'] != null ? '>' : '')
+									.$options['title']
+								.($options['link'] != null ? '</a>' : '')
+						.'</'.$options['tag'].'>';
+
+			echo $output;
 		}
 	}
 

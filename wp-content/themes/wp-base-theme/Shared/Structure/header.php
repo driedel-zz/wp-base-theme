@@ -47,7 +47,12 @@
 		<div class="header-main">
 			<?php
 				// Blog title
-				$Title -> Site( get_bloginfo( 'name' ), home_url( '/' ) );
+				$Title -> Site(
+					array(
+						'title' => get_bloginfo( 'name' ),
+						'link' => home_url( '/' )
+					)
+				);
 
 				// Skip to search acessibility
 				$Acessibility -> Search(sprintf( __( 'Skip to Search', 'twentyfourteen' )), '#search-container');

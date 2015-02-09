@@ -1,6 +1,6 @@
 			<header class="tag-header">
 				<?php
-					$Title -> Tag( single_cat_title( '', false ) );
+					$Title -> Tag( array( 'title' => single_cat_title( '', false ) ) );
 
 					// Show an optional term description.
 					$term_description = term_description();

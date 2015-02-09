@@ -20,9 +20,9 @@
 
 		<?php
 			if ( is_single() ) {
-				$Title -> Main(get_the_title());
+				$Title -> Main( array( 'title' => get_the_title() ) );
 			} else {
-				$Title -> Main(get_the_title(), get_permalink());
+				$Title -> Main( array( 'title' => get_the_title(), 'link' => get_permalink() ) );
 			}
 			// is_single()
 		?>

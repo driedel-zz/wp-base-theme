@@ -9,7 +9,7 @@
 ?>
 
 <header class="page-header">
-	<?php $Title -> Main( sprintf( __( 'Nothing Found', 'twentyfourteen' ) ) ); ?>
+	<?php $Title -> Main( array( 'title' => sprintf( __( 'Nothing Found', 'twentyfourteen' ) ) ) ); ?>
 </header>
 
 <div class="page-content">
