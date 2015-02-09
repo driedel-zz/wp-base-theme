@@ -16,11 +16,7 @@
 
 		<?php
 			if ( have_posts() ) {
-		?>
-				<header class="page-header">
-					<?php $Title -> Page( array( 'title' => sprintf( __( 'Search Results for: %s', 'twentyfourteen' ), get_search_query() ) ) ); ?>
-				</header><!-- .page-header -->
-		<?php
+				include( Modules. 'search/header.php' );
 				// Start the Loop.
 				while ( have_posts() ) {
 					the_post();
