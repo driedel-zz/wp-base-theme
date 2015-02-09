@@ -9,6 +9,7 @@
 	/*define('Inc', $relative_directory_uri.'/helpers/inc/');*/
 
 	$GLOBALS['global_css'] = AssetsRoot.'css/common.css';
+	$GLOBALS["global_js"] = AssetsRoot.'js/dist/main.js';
 
 	// Registrar o wrapper de todos os helpers
 	$theme_path = get_template_directory();

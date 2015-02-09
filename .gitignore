@@ -7,6 +7,7 @@ wp-content/*.php
 wp-content/plugins/**/*
 wp-content/uploads/**/*
 wp-content/themes/index.php
+min/config.php
 /*.php
 /*.txt
 /*.html
@@ -14,6 +15,7 @@ wp-content/themes/index.php
 *.*workspace
 web.config
 *.smb*
+*.css
 
 # Libs #
 ###################

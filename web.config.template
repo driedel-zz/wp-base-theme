@@ -20,6 +20,10 @@
 				</conditions>
 				<action type="Rewrite" url="index.php"/>
 			</rule>
+			<rule name="minify" stopProcessing="true">
+				<match url="^([bfg]=.*)"  />
+				<action type="Rewrite" url="/index.php?{R:0}"  />
+			</rule>
 		</rules>
 		</rewrite>
 	</system.webServer>

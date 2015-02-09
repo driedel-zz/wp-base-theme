@@ -6,5 +6,11 @@
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . /index.php [L]
+	RewriteRule ^([bfg]=.*)  index.php?$1 [L,NE]
 </IfModule>
 # END WordPress
+
+<IfModule mod_env.c>
+# In case AddOutputFilterByType has been added
+SetEnv no-gzip
+</IfModule>

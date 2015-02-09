@@ -24,7 +24,7 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
-	<!--<script src="<?php echo $AssetsRoot; ?>js/dist/maincd.js" async defer></script>-->
+	<script src="<?php echo $MinifyUrl ?><?php echo $GLOBALS["global_js"] ?>" async defer></script>
 
 	<?php
 		// footer reference for plugins
