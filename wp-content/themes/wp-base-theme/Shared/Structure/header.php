@@ -10,7 +10,7 @@
 	$GLOBALS['Root'] = $relative_uri;
 	$GLOBALS['AssetsRoot'] = $relative_directory_uri.'/assets/';
 	$GLOBALS['FullUrl'] = $_SERVER['REQUEST_URI'];
-	$GLOBALS['isLocal'] = $_SERVER[HTTP_HOST] == 'localhost' ? 'true' : 'false';
+	$GLOBALS['isLocal'] = $_SERVER['HTTP_HOST'] == 'localhost' ? 'true' : 'false';
 	$GLOBALS['MinifyUrl'] = $relative_uri.'wp-content/plugins/wp-minify/min/?f=';
 
 ?><!DOCTYPE html>

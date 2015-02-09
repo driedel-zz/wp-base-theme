@@ -1,4 +1,5 @@
 <?php
+	$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 	$relative_directory_uri = str_replace($protocol.$_SERVER['HTTP_HOST'], '', get_template_directory_uri());
 	define('AssetsRoot' , $relative_directory_uri.'/assets/');
 
