@@ -3,6 +3,13 @@
 bower_components
 node_modules
 *.sublime-*
+Gemfile
+Gemfile.lock
+gruntfile.js
+package.json
+contributors.txt
+sass/
+js/source
 
 # Avoid delet compiled references on the test server #
 obj

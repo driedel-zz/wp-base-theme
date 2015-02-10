@@ -1,8 +1,8 @@
 {
   "name": "Hyojun Wordpress",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "authors": [
-    "Danilo Nammur Riedel <driedel@fbiz.com.br>"
+    "Danilo Nammur Riedel <danilo.riedel@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
@@ -14,10 +14,9 @@
     "tests"
   ],
   "dependencies": {
-    "Hyojun.Guideline": "https://bitbucket.org/fbiz/hyojun.guideline.git#~0.1",
     "jquery": "https://github.com/fbiz/jquery.git#~2.0",
     "almond": "https://github.com/fbiz/almond.git#~0.3",
-    "gs": "gs#~0.5",
+    "bourbon": "^3.2.4",
     "normalize-scss": "~3.0.1"
   }
 }

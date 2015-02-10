@@ -1,0 +1,14 @@
+{
+	"curly": true,
+	"latedef" : true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"browser": true,
+	"smarttabs": true,
+	"maxlen": 120,
+	"globals": {
+		"jQuery": true,
+		"require": true,
+		"define": true
+	}
+}

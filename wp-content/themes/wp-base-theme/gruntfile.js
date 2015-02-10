@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 	var rjsModules = [],
 		config,
-		useRSync = grunt.file.exists("../.rsync-config");
+		useRSync = grunt.file.exists("../../../.rsync-config");
 
 	require("jit-grunt")(grunt, {
 		scsslint: "grunt-scss-lint"
@@ -20,19 +20,20 @@ module.exports = function(grunt) {
 	config = {
 		paths: {
 			rjs: {
-				bower: "../../../bower_components"
+				bower: "bower_components"
 			},
 			rsync: {
+				source: "./",
 				output: null
 			}
 		},
 		syncModules: [
-			"scroll",
-			"enquire",
-			"validator",
-			"validatorMessages",
-			"validatorRules",
-			"validatorMask"
+			// "scroll",
+			// "enquire",
+			// "validator",
+			// "validatorMessages",
+			// "validatorRules",
+			// "validatorMask"
 		],
 		requirejs: {
 			"main": {
@@ -46,17 +47,18 @@ module.exports = function(grunt) {
 						"mod": "../modules",
 						"wrp": "../wrappers",
 						"jquery": "<%=paths.rjs.bower%>/jquery/jquery",
-						"almond": "<%=paths.rjs.bower%>/almond/almond",
-						"hyojun.guideline": "<%= paths.rjs.bower%>/Hyojun.Guideline/assets/js/dist/guideline",
-						"validator": "<%= paths.rjs.bower%>/Validator/validator",
-						"validatorMessages": "<%= paths.rjs.bower%>/Validator/validator.messages",
-						"validatorRules": "<%= paths.rjs.bower%>/Validator/validator.rules",
-						"validatorMask": "<%= paths.rjs.bower%>/Validator/plugin/validator.mask",
-						"enquire": "<%= paths.rjs.bower%>/enquire/dist/enquire",
-						"scroll": "<%= paths.rjs.bower%>/jquery-scrolldepth/jquery.scrolldepth",
-						"placeHolder": "<%= paths.rjs.bower%>/jquery-placeholder/jquery.placeholder",
-						"matchMedia": "<%= paths.rjs.bower%>/matchMedia/matchMedia",
-						"matchMediaAddListener": "<%= paths.rjs.bower%>/matchMedia/matchMedia.addListener"
+						"almond": "<%=paths.rjs.bower%>/almond/almond"
+						// ,
+						// "hyojun.guideline": "<%= paths.rjs.bower%>/Hyojun.Guideline/assets/js/dist/guideline",
+						// "validator": "<%= paths.rjs.bower%>/Validator/validator",
+						// "validatorMessages": "<%= paths.rjs.bower%>/Validator/validator.messages",
+						// "validatorRules": "<%= paths.rjs.bower%>/Validator/validator.rules",
+						// "validatorMask": "<%= paths.rjs.bower%>/Validator/plugin/validator.mask",
+						// "enquire": "<%= paths.rjs.bower%>/enquire/dist/enquire",
+						// "scroll": "<%= paths.rjs.bower%>/jquery-scrolldepth/jquery.scrolldepth",
+						// "placeHolder": "<%= paths.rjs.bower%>/jquery-placeholder/jquery.placeholder",
+						// "matchMedia": "<%= paths.rjs.bower%>/matchMedia/matchMedia",
+						// "matchMediaAddListener": "<%= paths.rjs.bower%>/matchMedia/matchMedia.addListener"
 					},
 					"optimize": "none",
 					"modules": rjsModules,
@@ -116,7 +118,7 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			options: grunt.file.readJSON("../.jshintrc"),
+			options: grunt.file.readJSON("../../../.jshintrc"),
 			main: [
 				"gruntfile.js",
 				"assets/js/**/*.js",
@@ -131,8 +133,8 @@ module.exports = function(grunt) {
 				"rsync",
 				"-rvuzW",
 				"--delete",
-				"--exclude-from=../.rsync-ignore",
-				"../",
+				"--exclude-from=../../../.rsync-ignore",
+				"../../../",
 				"<%=paths.rsync.output%>"
 			].join(" ")
 		},
@@ -157,16 +159,17 @@ module.exports = function(grunt) {
 	grunt.initConfig(config);
 
 	if (useRSync) {
-		config.paths.rsync = grunt.file.readJSON("../.rsync-config");
+		config.paths.rsync = grunt.file.readJSON("../../../.rsync-config");
 		config.watch.sync = {
 			files: [
-				"assets/css/**/*.css",
-				"**/*.config",
-				"assets/js/dist/**/*.js",
-				"assets/img/**/*.*",
-				"assets/fonts/**/*.*",
-				"Views/**/*.*",
-				"App_Code/**/*.*"
+				// "assets/css/**/*.css",
+				// "**/*.config",
+				// "assets/js/dist/**/*.js",
+				// "assets/img/**/*.*",
+				// "assets/fonts/**/*.*",
+				// "Views/**/*.*",
+				// "App_Code/**/*.*"
+				"*.*"
 			],
 			tasks: ["exec:sync"],
 			options: {
@@ -186,9 +189,18 @@ module.exports = function(grunt) {
 		});
 	}
 
+
+	// grunt.loadNpmTasks('grunt-contrib-jshint');
+	// grunt.loadNpmTasks('grunt-contrib-requirejs');
+	// grunt.loadNpmTasks('grunt-contrib-sass');
+	// grunt.loadNpmTasks('grunt-contrib-uglify');
+	// grunt.loadNpmTasks('grunt-contrib-watch');
+	// grunt.loadNpmTasks('grunt-exec');
+	// grunt.loadNpmTasks('grunt-scss-lint');
+
 	grunt.registerTask("js", ["jshint", "requirejs"]);
 	grunt.registerTask("js:dist", ["js", "uglify"]);
 	grunt.registerTask("css", ["scsslint", "sass"]);
-	grunt.registerTask("default", ["css", "js:dist"]);
+	// grunt.registerTask("default", ["css", "js:dist"]);
 	grunt.registerTask("packages", ["exec:npm", "exec:bower", "exec:bundle"]);
 };
