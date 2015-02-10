@@ -23,7 +23,6 @@ module.exports = function(grunt) {
 				bower: "bower_components"
 			},
 			rsync: {
-				source: "./",
 				output: null
 			}
 		},
@@ -132,7 +131,7 @@ module.exports = function(grunt) {
 			"sync": [
 				"rsync",
 				"-rvuzW",
-				"--delete",
+				"--keep-dirlinks",
 				"--exclude-from=../../../.rsync-ignore",
 				"../../../",
 				"<%=paths.rsync.output%>"
@@ -162,14 +161,18 @@ module.exports = function(grunt) {
 		config.paths.rsync = grunt.file.readJSON("../../../.rsync-config");
 		config.watch.sync = {
 			files: [
-				// "assets/css/**/*.css",
-				// "**/*.config",
-				// "assets/js/dist/**/*.js",
-				// "assets/img/**/*.*",
-				// "assets/fonts/**/*.*",
-				// "Views/**/*.*",
-				// "App_Code/**/*.*"
-				"*.*"
+				"min/*.*",
+				"**/*.config",
+				"wp-content/themes/wp-base-theme/assets/js/dist/**/*.js",
+				"wp-content/themes/wp-base-theme/assets/img/**/*.*",
+				"wp-content/themes/wp-base-theme/assets/fonts/**/*.*",
+				"wp-content/themes/wp-base-theme/Shared/**/*.*",
+				"wp-content/themes/wp-base-theme/config/**/*.*",
+				"wp-content/themes/wp-base-theme/Helpers/**/*.*",
+				"wp-content/themes/wp-base-theme/languages/**/*.*",
+				"wp-content/themes/wp-base-theme/Templates/**/*.*",
+				"wp-content/themes/wp-base-theme/*.php",
+				"wp-content/themes/wp-base-theme/*.css"
 			],
 			tasks: ["exec:sync"],
 			options: {
@@ -190,17 +193,9 @@ module.exports = function(grunt) {
 	}
 
 
-	// grunt.loadNpmTasks('grunt-contrib-jshint');
-	// grunt.loadNpmTasks('grunt-contrib-requirejs');
-	// grunt.loadNpmTasks('grunt-contrib-sass');
-	// grunt.loadNpmTasks('grunt-contrib-uglify');
-	// grunt.loadNpmTasks('grunt-contrib-watch');
-	// grunt.loadNpmTasks('grunt-exec');
-	// grunt.loadNpmTasks('grunt-scss-lint');
-
 	grunt.registerTask("js", ["jshint", "requirejs"]);
 	grunt.registerTask("js:dist", ["js", "uglify"]);
 	grunt.registerTask("css", ["scsslint", "sass"]);
-	// grunt.registerTask("default", ["css", "js:dist"]);
+	grunt.registerTask("default", ["css", "js:dist"]);
 	grunt.registerTask("packages", ["exec:npm", "exec:bower", "exec:bundle"]);
 };
