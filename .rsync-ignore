@@ -9,10 +9,9 @@ Gemfile.lock
 gruntfile.js
 package.json
 contributors.txt
-sass/
-js/source
 *.md
-
-# Avoid delet compiled references on the test server #
-obj
-bin
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes

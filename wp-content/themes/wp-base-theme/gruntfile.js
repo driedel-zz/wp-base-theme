@@ -161,7 +161,7 @@ module.exports = function(grunt) {
 		config.paths.rsync = grunt.file.readJSON("../../../.rsync-config");
 		config.watch.sync = {
 			files: [
-				"min/*.*",
+				"min/**/*.*",
 				"**/*.config",
 				"wp-content/themes/wp-base-theme/assets/js/dist/**/*.js",
 				"wp-content/themes/wp-base-theme/assets/img/**/*.*",
