@@ -18,7 +18,6 @@
 			if ( have_posts() ) {
 
 				include( Modules.'Category/header.php' );
-				// .archive-header
 
 					// Start the Loop.
 					while ( have_posts() ) {

@@ -1,9 +1,9 @@
 define(function (require) {
 	// Almond por sempre ser saída concatenada
 	require('almond');
-	require('zepto/zepto');
-	require('zepto/event');
-	require('zepto/ie');
+	// require('zepto/zepto');
+	// require('zepto/event');
+	// require('zepto/ie');
 	// Arquivo inserido para garantir que 2 arquivos
 	// sejam carregados em paralelo e executem na sequencia
 	require('mod/hyojun/mod-async-run');

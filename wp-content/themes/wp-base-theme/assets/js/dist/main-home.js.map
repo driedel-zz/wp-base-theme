@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "main-home.js",
+  "sources": [
+    "../modules/hyojun/mod-async-check.js",
+    "main-home.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,AC5BA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+  "sourcesContent": [
+    "// Este arquivo não deve ser um módulo,\n// pois será executado antes de existir a require\n(function(w){\n\tif (!w.require) {\n\t\tw.hbsExec = w.hbsExec || [];\n\t\tw.require = function(){\n\t\t\tw.hbsExec.push({\n\t\t\t\tfunc: 'require',\n\t\t\t\targs: arguments\n\t\t\t});\n\t\t};\n\t\tw.define = function(){\n\t\t\tw.hbsExec.push({\n\t\t\t\tfunc: 'define',\n\t\t\t\targs: arguments\n\t\t\t});\n\t\t};\n\t\tw.queue = function(){\n\t\t\tw.hbsExec.push({\n\t\t\t\tfunc: 'queue',\n\t\t\t\targs: arguments\n\t\t\t});\n\t\t};\n\t}\n}(window));\n\ndefine(\"mod/hyojun/mod-async-check\", function(){});\n\n",
+    "define('main-home',['require','mod/hyojun/mod-async-check'],function(require){\n\trequire('mod/hyojun/mod-async-check');\n});\nrequire([], function () {\n\n\t// Este arquivo deve conter apenas inicialização de módulos\n\t// NÃO INSERIR LÓGICA!\n\n\tconsole.info('HELLO WORLD!');\n\n});\n\n"
+  ]
+}

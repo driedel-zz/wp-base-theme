@@ -1,5 +1,5 @@
 define(function (require) {
-	require('mod/hyojun/mod-browser-update');
+	// require('mod/hyojun/mod-browser-update');
 	// Almond por sempre ser saída concatenada
 	require('almond');
 	require('jquery');

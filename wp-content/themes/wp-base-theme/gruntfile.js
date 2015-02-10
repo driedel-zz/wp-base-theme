@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 	config = {
 		paths: {
 			rjs: {
-				bower: "bower_components"
+				bower: "../../../bower_components"
 			},
 			rsync: {
 				output: null
@@ -47,17 +47,6 @@ module.exports = function(grunt) {
 						"wrp": "../wrappers",
 						"jquery": "<%=paths.rjs.bower%>/jquery/jquery",
 						"almond": "<%=paths.rjs.bower%>/almond/almond"
-						// ,
-						// "hyojun.guideline": "<%= paths.rjs.bower%>/Hyojun.Guideline/assets/js/dist/guideline",
-						// "validator": "<%= paths.rjs.bower%>/Validator/validator",
-						// "validatorMessages": "<%= paths.rjs.bower%>/Validator/validator.messages",
-						// "validatorRules": "<%= paths.rjs.bower%>/Validator/validator.rules",
-						// "validatorMask": "<%= paths.rjs.bower%>/Validator/plugin/validator.mask",
-						// "enquire": "<%= paths.rjs.bower%>/enquire/dist/enquire",
-						// "scroll": "<%= paths.rjs.bower%>/jquery-scrolldepth/jquery.scrolldepth",
-						// "placeHolder": "<%= paths.rjs.bower%>/jquery-placeholder/jquery.placeholder",
-						// "matchMedia": "<%= paths.rjs.bower%>/matchMedia/matchMedia",
-						// "matchMediaAddListener": "<%= paths.rjs.bower%>/matchMedia/matchMedia.addListener"
 					},
 					"optimize": "none",
 					"modules": rjsModules,
@@ -161,18 +150,16 @@ module.exports = function(grunt) {
 		config.paths.rsync = grunt.file.readJSON("../../../.rsync-config");
 		config.watch.sync = {
 			files: [
-				"min/**/*.*",
-				"**/*.config",
-				"wp-content/themes/wp-base-theme/assets/js/dist/**/*.js",
-				"wp-content/themes/wp-base-theme/assets/img/**/*.*",
-				"wp-content/themes/wp-base-theme/assets/fonts/**/*.*",
-				"wp-content/themes/wp-base-theme/Shared/**/*.*",
-				"wp-content/themes/wp-base-theme/config/**/*.*",
-				"wp-content/themes/wp-base-theme/Helpers/**/*.*",
-				"wp-content/themes/wp-base-theme/languages/**/*.*",
-				"wp-content/themes/wp-base-theme/Templates/**/*.*",
-				"wp-content/themes/wp-base-theme/*.php",
-				"wp-content/themes/wp-base-theme/*.css"
+				"assets/js/dist/**/*.js",
+				"assets/img/**/*.*",
+				"assets/fonts/**/*.*",
+				"Shared/**/*.*",
+				"config/**/*.*",
+				"Helpers/**/*.*",
+				"languages/**/*.*",
+				"Templates/**/*.*",
+				"**/*.php",
+				"*.css"
 			],
 			tasks: ["exec:sync"],
 			options: {
