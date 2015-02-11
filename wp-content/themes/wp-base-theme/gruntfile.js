@@ -141,7 +141,8 @@ module.exports = function(grunt) {
 					livereload: true
 				}
 			}
-		}
+		},
+		svn_fetch: grunt.file.readJSON("../../../.wp-plugins-config")
 	};
 
 	grunt.initConfig(config);
@@ -180,9 +181,10 @@ module.exports = function(grunt) {
 	}
 
 
+	grunt.registerTask('wp-plugins', ["svn_fetch"]);
 	grunt.registerTask("js", ["jshint", "requirejs"]);
 	grunt.registerTask("js:dist", ["js", "uglify"]);
 	grunt.registerTask("css", ["scsslint", "sass"]);
 	grunt.registerTask("default", ["css", "js:dist"]);
-	grunt.registerTask("packages", ["exec:npm", "exec:bower", "exec:bundle"]);
+	grunt.registerTask("packages", ["exec:npm", "exec:bower", "exec:bundle", "svn_fetch"]);
 };
