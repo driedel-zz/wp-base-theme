@@ -1,0 +1,17 @@
+# Don't sent dev files (.git, modules, project files)
+.*
+bower_components
+node_modules
+*.sublime-*
+bower.json
+Gemfile
+Gemfile.lock
+gruntfile.js
+package.json
+contributors.txt
+*.md
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes

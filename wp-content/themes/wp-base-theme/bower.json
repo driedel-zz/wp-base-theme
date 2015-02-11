@@ -1,0 +1,23 @@
+{
+  "name": "Hyojun Wordpress",
+  "version": "1.0.0",
+  "authors": [
+    "Danilo Nammur Riedel <danilo.riedel@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "https://github.com/fbiz/jquery.git#~2.0",
+    "almond": "https://github.com/fbiz/almond.git#~0.3",
+    "bourbon": "^3.2.4",
+    "normalize-scss": "~3.0.1",
+    "gs": "^0.5.1"
+  }
+}
