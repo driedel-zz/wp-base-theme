@@ -1,0 +1,20 @@
+{
+	"sitemap" : {
+		"options": {
+			"repository": "http://plugins.svn.wordpress.org/google-sitemap-generator/",
+			"path": "../../plugins/"
+		},
+		"map": {
+			"google-sitemap-generator": "tags/4.0.8"
+		}
+	},
+	"smushit" : {
+		"options": {
+			"repository": "http://plugins.svn.wordpress.org/wp-smushit/",
+			"path": "../../plugins/"
+		},
+		"map": {
+			"wp-smushit" : "tags/1.7"
+		}
+	}
+}
