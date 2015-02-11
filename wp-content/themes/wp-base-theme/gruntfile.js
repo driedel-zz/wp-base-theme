@@ -114,8 +114,8 @@ module.exports = function(grunt) {
 			]
 		},
 		exec: {
-			"npm": "npm install",
-			"bower": "bower install",
+			"npm": "npm prune && npm install",
+			"bower": "bower prune && bower install",
 			"bundle": "bundle install",
 			"sync": [
 				"rsync",

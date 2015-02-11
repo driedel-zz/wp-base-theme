@@ -17,6 +17,7 @@
     "jquery": "https://github.com/fbiz/jquery.git#~2.0",
     "almond": "https://github.com/fbiz/almond.git#~0.3",
     "bourbon": "^3.2.4",
-    "normalize-scss": "~3.0.1"
+    "normalize-scss": "~3.0.1",
+    "gs": "^0.5.1"
   }
 }

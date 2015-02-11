@@ -15,11 +15,6 @@
 $base-font-size: 16px;
 $title-font-size: 20px;
 
-$gl-font-size-example-list: (
-	("base", $base-font-size, $base-font-size), // base font é pixel para referência de cálculo.
-	("title", $title-font-size, $base-font-size),
-);
-
 
 
 ///////////////////
@@ -51,14 +46,6 @@ $regular-font-weight: 400;
 $medium-font-weight: 500;
 $bold-font-weight: 700;
 $black-font-weight: 900;
-
-$gl-font-weight-example-list: (
-	("light", $light-font-weight),
-	("regular", $regular-font-weight),
-	("medium", $medium-font-weight),
-	("bold", $bold-font-weight),
-	("black", $black-font-weight)
-);
 
 
 /////////////
@@ -114,7 +101,3 @@ $fast-anim-delay: $base-anim-delay * .5;
 $base-space-size: 10px;
 $double-space-size: ($base-space-size * 2);
 
-$gl-spacement-example-list: (
-	("base", $base-space-size, $base-font-size),
-	("double", $double-space-size, $base-font-size),
-);
