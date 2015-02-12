@@ -9,6 +9,7 @@ Este tema foi criado para melhorar a organização dos arquivos da pasta `Themes
 ## Requisitos mínimos e organização
 
 * [Setup inicial](https://github.com/driedel/wp-base-theme/wiki/Setup-inicial) - Requisitos mínimos e configurações avançadas.
+* [Arquivos de configuração](https://github.com/driedel/wp-base-theme/tree/working/config-files/) - Documentação de todos os arquivos de configuração do projeto.
 * Instalação do Wordpress - O tema não possui nenhum arquivo relacionado a nenhuma versão do core do Wordpress
 
 ---------------------------------------
