@@ -20,7 +20,7 @@ Este tema foi criado para melhorar a organização dos arquivos da pasta `Themes
 
 ## Branches concluídos
 * setup-file-structure - Setup inicial com todas as Views, módulos, helpers, estrutura de pastas de assets, arquivos de configuração para funcionamento mínimo do tema.
-* grunt-wp-plugins - Definir os plugins no gruntfile.js para que sejam baixados junto do projeto, relacionado ao [issue #5](https://bitbucket.org/danilo_riedel/wp-base-theme/issue/5/plugins-do-wordpress)
+* grunt-wp-plugins - Definir os plugins no gruntfile.js para que sejam baixados junto do projeto.
 
 ---------------------------------------
 

@@ -4,8 +4,8 @@ Utilizamos como base a [minify](https://code.google.com/p/minify/) existente no 
 
 A minificação de arquivos é feita automaticamente e para a inclusão de arquivos utilizamos duas variáveis globais aonde iremos concatenar os arquivos específicos de cada View com os arquivos globais:
 
-* `$global_css` - Tem como padrão o arquivo `common.css` carregado pelo [global-vars.php](https://bitbucket.org/danilo_riedel/wp-base-theme/src/298abc86c1f3570612a2e7c17a261ebb95e8d1ee/wp-content/themes/wp-base-theme/config/)
-* `$global_js` - Tem como padrão o arquivo `main.js` carregado pelo [global-vars.php](https://bitbucket.org/danilo_riedel/wp-base-theme/src/298abc86c1f3570612a2e7c17a261ebb95e8d1ee/wp-content/themes/wp-base-theme/config/)
+* `$global_css` - Tem como padrão o arquivo `common.css` carregado pelo [global-vars.php](https://github.com/driedel/wp-base-theme/tree/working/wp-content/themes/wp-base-theme/config)
+* `$global_js` - Tem como padrão o arquivo `main.js` carregado pelo [global-vars.php](https://github.com/driedel/wp-base-theme/tree/working/wp-content/themes/wp-base-theme/config)
 
 No início do código de cada `View` podemos declarar quais são os outros arquivos que iremos importar para que a `minify` faça a concatenação e gere apenas um arquivo de saída no formato `gzip`.
 

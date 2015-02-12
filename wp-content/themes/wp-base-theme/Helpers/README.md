@@ -2,7 +2,7 @@
 
 Date: 2015-02-06
 
-Os `helpers` são funções que recebem parâmetros para retornar pequenos trechos de `HTML`. Pela estrutura do `PHP` eles foram criados como classes que são acessíveis em qualquer lugar do projeto pois são chamados pelo [global-vars.php]() através do arquivo `wrappers.php` que fica dentro da pasta dos helpers, portanto cada novo conjunto de `helpers` deve ser registrado neste arquivo para ficar acessível em qualquer outro arquivo do site.
+Os `helpers` são funções que recebem parâmetros para retornar pequenos trechos de `HTML`. Pela estrutura do `PHP` eles foram criados como classes que são acessíveis em qualquer lugar do projeto pois são chamados pelo [global-vars.php](https://github.com/driedel/wp-base-theme/tree/working/wp-content/themes/wp-base-theme/config) através do arquivo `wrappers.php` que fica dentro da pasta dos helpers, portanto cada novo conjunto de `helpers` deve ser registrado neste arquivo para ficar acessível em qualquer outro arquivo do site.
 
 ---------------------------------------
 

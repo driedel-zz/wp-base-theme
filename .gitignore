@@ -15,7 +15,7 @@ min/config.php
 *.*workspace
 web.config
 *.smb*
-*.css
+*.css*
 
 # Libs #
 ###################
