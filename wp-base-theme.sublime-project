@@ -56,6 +56,9 @@
 			"name": "Theme",
 			"path": "./wp-content/themes/wp-base-theme/"
 		},{
+			"name": "Config Files",
+			"path": "./config-files/"
+		},{
 			"file_exclude_patterns":
 			[
 				"*.sublime-workspace",

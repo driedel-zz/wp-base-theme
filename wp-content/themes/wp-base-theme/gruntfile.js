@@ -4,7 +4,8 @@ module.exports = function(grunt) {
 
 	var rjsModules = [],
 		config,
-		useRSync = grunt.file.exists("../../../.rsync-config");
+		configFiles = "../../../config-files/",
+		useRSync = grunt.file.exists( configFiles + ".rsync-config");
 
 	require("jit-grunt")(grunt, {
 		scsslint: "grunt-scss-lint"
@@ -106,7 +107,7 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			options: grunt.file.readJSON("../../../.jshintrc"),
+			options: grunt.file.readJSON( configFiles + ".jshintrc"),
 			main: [
 				"gruntfile.js",
 				"assets/js/**/*.js",
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
 				"rsync",
 				"-rvuzW",
 				"--keep-dirlinks",
-				"--exclude-from=../../../.rsync-ignore",
+				"--exclude-from=" + configFiles + ".rsync-ignore",
 				"../../../",
 				"<%=paths.rsync.output%>"
 			].join(" ")
@@ -142,13 +143,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		svn_fetch: grunt.file.readJSON("../../../.wp-plugins-config")
+		svn_fetch: grunt.file.readJSON( configFiles + ".wp-plugins-config")
 	};
 
 	grunt.initConfig(config);
 
 	if (useRSync) {
-		config.paths.rsync = grunt.file.readJSON("../../../.rsync-config");
+		config.paths.rsync = grunt.file.readJSON( configFiles + ".rsync-config");
 		config.watch.sync = {
 			files: [
 				"assets/js/dist/**/*.js",
@@ -172,7 +173,7 @@ module.exports = function(grunt) {
 		grunt.registerTask('sync', function() {
 			grunt.log.writeln([
 				"Nota:",
-				" Arquivo '.rsync-config' não encontrado na raíz do projeto.",
+				" Arquivo '.rsync-config' não encontrado na raíz do projeto na pasta config-files.",
 				" Task 'sync' e 'watch:sync' não estará disponível. \n",
 				"Para utilizar esta task, crie o arquivo com o JSON: ",
 				"{ \"output\": \"/Volumes/DIRETORIO/DE/DESTINO\" }"
