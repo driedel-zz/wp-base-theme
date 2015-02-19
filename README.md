@@ -31,6 +31,7 @@ Este tema foi criado para melhorar a organização dos arquivos da pasta `Themes
 * [#1 - Language](https://github.com/driedel/wp-base-theme/issues/1)
 * [#2 - SEO](https://github.com/driedel/wp-base-theme/issues/2)
 * [#3 - Open Graph protocol](https://github.com/driedel/wp-base-theme/issues/3)
+* [#4 - Breadcrumb](https://github.com/driedel/wp-base-theme/issues/4)
 
 ---------------------------------------
 
