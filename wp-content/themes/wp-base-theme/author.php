@@ -7,7 +7,7 @@
 	// apenas o padrão do site.
 	// ex: $global_css .= ','.AssetsRoot.'css/home.css';
 
-	include( Strucutre.'header.php' );
+	include( Structure.'header.php' );
 ?>
 
 <div <?php $HtmlWrappers -> MainContent(); ?>>
@@ -43,4 +43,4 @@
 	<?php include( Modules.'sidebar.php' ); ?>
 </div><!-- #main-content -->
 
-<?php include( Strucutre.'footer.php' );
+<?php include( Structure.'footer.php' );

@@ -11,7 +11,7 @@
 	// apenas o padrão do site.
 	// ex: $global_css .= ','.AssetsRoot.'css/home.css';
 
-	include_once(BaseToSubDir.Strucutre.'header.php' );
+	include_once(BaseToSubDir.Structure.'header.php' );
 ?>
 
 <div <?php $HtmlWrappers -> MainContent(); ?>>
@@ -34,4 +34,4 @@
 	<?php include_once( BaseToSubDir.Modules.'sidebar-content.php' ); ?>
 </div><!-- #main-content -->
 
-<?php include_once( BaseToSubDir.Strucutre.'footer.php' );
+<?php include_once( BaseToSubDir.Structure.'footer.php' );

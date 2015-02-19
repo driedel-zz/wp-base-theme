@@ -62,40 +62,7 @@ function twentyfourteen_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'twentyfourteen_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @since Twenty Fourteen 1.0
- *
- * @return void
- */
-function twentyfourteen_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
 
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'twentyfourteen' ); ?></h1>
-		<div class="nav-links">
-			<?php
-			if ( is_attachment() ) :
-				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
-			else :
-				previous_post_link( '%link', __( '<span class="meta-nav">Previous Post</span>%title', 'twentyfourteen' ) );
-				next_post_link( '%link', __( '<span class="meta-nav">Next Post</span>%title', 'twentyfourteen' ) );
-			endif;
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
 
 if ( ! function_exists( 'twentyfourteen_posted_on' ) ) :
 /**
@@ -121,96 +88,36 @@ function twentyfourteen_posted_on() {
 }
 endif;
 
-/**
- * Find out if blog has more than one category.
- *
- * @since Twenty Fourteen 1.0
- *
- * @return boolean true if blog has more than 1 category
- */
-function twentyfourteen_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'twentyfourteen_category_count' ) ) ) {
-		// Create an array of all the categories that are attached to posts
-		$all_the_cool_cats = get_categories( array(
-			'hide_empty' => 1,
-		) );
-
-		// Count the number of categories that are attached to the posts
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( 'twentyfourteen_category_count', $all_the_cool_cats );
-	}
-
-	if ( 1 !== (int) $all_the_cool_cats ) {
-		// This blog has more than 1 category so twentyfourteen_categorized_blog should return true
-		return true;
-	} else {
-		// This blog has only 1 category so twentyfourteen_categorized_blog should return false
-		return false;
-	}
-}
 
 /**
- * Flush out the transients used in twentyfourteen_categorized_blog.
+ * WP Base Theme
+ * Versão 1.0.0
+ * Funções customizadas
  *
- * @since Twenty Fourteen 1.0
  *
- * @return void
- */
-function twentyfourteen_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient( 'twentyfourteen_category_count' );
-}
-add_action( 'edit_category', 'twentyfourteen_category_transient_flusher' );
-add_action( 'save_post',     'twentyfourteen_category_transient_flusher' );
-
-
-// This theme uses wp_nav_menu() in two locations.
-register_nav_menus( array(
-	'primary'   => __( 'Top primary menu', 'twentyfourteen' ),
-	'secondary' => __( 'Secondary menu sidebar', 'twentyfourteen' ),
-	'tertiary' => __( 'Tertiary menu footer', 'twentyfourteen' ),
-) );
-
-/**
- * Display an optional post thumbnail.
  *
- * Wraps the post thumbnail in an anchor element on index
- * views, or a div element when on single views.
  *
- * @since Twenty Fourteen 1.0
  *
- * @return void
-*/
-function twentyfourteen_post_thumbnail() {
-	if ( post_password_required() || ! has_post_thumbnail() ) {
-		return;
-	}
+ *
+ *
+ *
+ *
+**/
 
-	if ( is_singular() ) :
-	?>
 
-	<div class="post-thumbnail">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
-	</div>
+	// Este tema usa o wp_nav_menu() em três locais.
+	register_nav_menus( array(
+		'primary'   => __( 'Top primary menu', 'twentyfourteen' ), // Shared/Structure/header.php
+		'secondary' => __( 'Secondary menu sidebar', 'twentyfourteen' ), // Shared/Modules/sidebar.php
+		'tertiary' => __( 'Tertiary menu footer', 'twentyfourteen' ), // Shared/Structure/footer.php
+	) );
 
-	<?php else : ?>
+	// Habilita o suporte o suporte de thumbnails de posts, e declara dois tamanhos.
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 672, 372, true );
+	add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
 
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'twentyfourteen-full-width' );
-		} else {
-			the_post_thumbnail();
-		}
-	?>
-	</a>
 
-	<?php endif; // End is_singular()
-}
+
+
+

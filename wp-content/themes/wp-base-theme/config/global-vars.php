@@ -4,7 +4,7 @@
 	define('AssetsRoot' , $relative_directory_uri.'/assets/');
 
 	define('Modules', '/Shared/Modules/');
-	define('Strucutre', '/Shared/Structure/');
+	define('Structure', '/Shared/Structure/');
 	define('BaseToSubDir', dirname(__FILE__).'../../');
 	/*define('Inc', $relative_directory_uri.'/helpers/inc/');*/
 
